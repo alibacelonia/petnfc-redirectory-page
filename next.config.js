@@ -4,12 +4,12 @@ const nextConfig = {
         return [
           {
             source: '/:slug',
-            destination: 'http://secure-petnfc.info/pet/:slug',
+            destination: 'http://petnfc.com.au/pet/:slug',
             permanent: true
           },
           {
             source: '/',
-            destination: 'http://secure-petnfc.info',
+            destination: 'http://petnfc.com.au',
             permanent: true
           }
         ];
