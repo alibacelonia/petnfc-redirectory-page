@@ -4,7 +4,14 @@ import React, { Component, useEffect } from "react";
 
 export default async function PetDetailsPage({ params }: {params: {guid: string}}) {
   useEffect(() => {
-    window.location.href = `http://petnfc.com.au/pet/${params.guid}`;
+    // Get the current referrer
+    const referrer = document.referrer;
+  
+    // Append the referrer as a query parameter to the URL
+    const urlWithReferrer = `http://petnfc.com.au/pet/${params.guid}?referrer=${encodeURIComponent(referrer)}`;
+  
+    // Redirect to the modified URL
+    window.location.href = urlWithReferrer;
   }, []);
 
   return (
